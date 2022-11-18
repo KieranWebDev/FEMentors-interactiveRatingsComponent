@@ -33,7 +33,8 @@ main {
   border-radius: 30px;
   font-family: 'Overpass', sans-serif;
 }
-.circular-container {
+.circular-container,
+.rating-container {
   background: #262e38;
   border-radius: 50%;
   padding: 1rem;
@@ -58,11 +59,18 @@ ul li {
   width: 50px;
   text-align: center;
   color: #7c8798;
+  cursor: pointer;
 }
-ul li:hover {
+.hover:hover {
   background: #7c8798;
   color: white;
 }
+
+/* .rating-container:active,
+.rating-container:focus {
+  background: #fc7614;
+  color: white;
+} */
 
 button {
   width: 100%;
@@ -74,6 +82,7 @@ button {
   color: white;
   border: none;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 button:hover {
   background-color: white;
@@ -87,4 +96,5 @@ button:hover {
 }
 .orange {
   background-color: #fc7614;
+  color: white;
 }
