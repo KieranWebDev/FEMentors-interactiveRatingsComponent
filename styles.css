@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* js toggle */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #131518;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 412px;
+  padding: 2rem;
+  color: white;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+  font-family: 'Overpass', sans-serif;
+}
+.circular-container {
+  background: #262e38;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1.5rem;
+  font-size: 15px;
+  line-height: 24px;
+  color: #969fad;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+ul li {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  color: #7c8798;
+}
+ul li:hover {
+  background: #7c8798;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 22.5px;
+  background-color: #fc7614;
+  color: white;
+  border: none;
+  letter-spacing: 2px;
+}
+button:hover {
+  background-color: white;
+  color: #fc7614;
+}
+
+.rating {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: white;
+}
+.orange {
+  background-color: #fc7614;
+}
