@@ -4,19 +4,19 @@ let ratingIsThree = document.querySelector('.three');
 let ratingIsFour = document.querySelector('.four');
 let ratingIsFive = document.querySelector('.five');
 let submit = document.querySelector('#submit-button');
-let ratingMessage = document.querySelector('.rating');
+let ratingMessage = document.querySelector('.rating-message');
 let mainComponent = document.querySelector('.main');
 let modal = document.querySelector('.modal');
 
 let rating = 0;
 
 function buttonOneSelected(element) {
-  ratingIsOne.classList.remove('orange');
-  ratingIsTwo.classList.remove('orange');
-  ratingIsThree.classList.remove('orange');
-  ratingIsFour.classList.remove('orange');
-  ratingIsFive.classList.remove('orange');
-  element.classList.toggle('orange');
+  ratingIsOne.classList.remove('rating-selected');
+  ratingIsTwo.classList.remove('rating-selected');
+  ratingIsThree.classList.remove('rating-selected');
+  ratingIsFour.classList.remove('rating-selected');
+  ratingIsFive.classList.remove('rating-selected');
+  element.classList.toggle('rating-selected');
   element.classList.remove('hover');
   rating = element.innerText;
   console.log(rating);

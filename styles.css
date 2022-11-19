@@ -1,7 +1,20 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
-/* js toggle */
+/* CSS Variables */
+:root {
+  --main-text: #ffffff;
+  --backround: #131518;
+  --background-card: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  --call-to-action: #fc7614;
+  --hover: #7c8798;
+}
 
+/* general styles */
 html {
   box-sizing: border-box;
 }
@@ -12,8 +25,9 @@ html {
   padding: 0;
   margin: 0;
 }
+
 body {
-  background: #131518;
+  background: var(--backround);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,35 +36,32 @@ body {
   /* position: relative; */
 }
 
+/* main section */
+
 main,
 .modal {
   max-width: 412px;
   padding: 2rem;
-  color: white;
-  background: radial-gradient(
-    98.96% 98.96% at 50% 0%,
-    #232a34 0%,
-    #181e27 100%
-  );
+  color: var(--main-text);
+  background: var(--background-card);
   border-radius: 30px;
   font-family: 'Overpass', sans-serif;
-}
-.hidden {
-  visibility: hidden;
-  position: absolute;
 }
 
 /* .hidden {
 } */
-.modal .circular-container,
+
+.star-container,
 .rating-container {
   background: #262e38;
   border-radius: 50%;
   padding: 1rem;
   margin-bottom: 2rem;
 }
+
 h1 {
   margin-bottom: 1rem;
+  font-size: 1.75rem;
 }
 p {
   margin-bottom: 1.5rem;
@@ -63,10 +74,12 @@ ul {
   list-style-type: none;
   justify-content: space-between;
 }
-ul li {
-  height: 50px;
-  width: 50px;
-  text-align: center;
+.rating-container {
+  height: 3.125rem;
+  width: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #7c8798;
   cursor: pointer;
 }
@@ -98,14 +111,68 @@ button:hover {
   color: #fc7614;
 }
 
-.rating {
-  font-size: 2rem;
-  margin-top: 2rem;
-  color: white;
-}
-.orange {
+/* toggles when rating is selected */
+.rating-selected {
   background-color: #fc7614;
   color: white;
 }
 
-/* popup */
+/* modal selectors */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.8125rem 1.5625rem;
+}
+.modal img {
+  width: 162px;
+  height: 108px;
+  margin-bottom: 2rem;
+}
+
+.rating-message {
+  font-size: 0.9375rem;
+  color: white;
+  background-color: #262e38;
+  color: var(--call-to-action);
+  padding: 0.25rem 1.25rem;
+  border-radius: 22.5px;
+  margin-bottom: 2.25rem;
+}
+.modal p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* toggle variable - hide and show the relevant card */
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+@media (max-width: 460px) {
+  .main,
+  .modal {
+    max-width: 327px;
+    border-radius: 15px;
+  }
+
+  .main {
+    padding: 1.5rem;
+  }
+  .star-container {
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+  }
+  .rating-container {
+    height: 42px;
+    width: 42px;
+    margin-bottom: 1.5rem;
+  }
+  .modal {
+  }
+}
