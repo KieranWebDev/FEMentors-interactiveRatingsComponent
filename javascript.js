@@ -10,7 +10,7 @@ let modal = document.querySelector('.modal');
 
 let rating = 0;
 
-function buttonOneSelected(element) {
+function buttonSelected(element) {
   ratingIsOne.classList.remove('rating-selected');
   ratingIsTwo.classList.remove('rating-selected');
   ratingIsThree.classList.remove('rating-selected');
@@ -32,15 +32,15 @@ function submitRating() {
   }
 }
 
-ratingIsOne.addEventListener('click', () => buttonOneSelected(ratingIsOne));
+ratingIsOne.addEventListener('click', () => buttonSelected(ratingIsOne));
 
-ratingIsTwo.addEventListener('click', () => buttonOneSelected(ratingIsTwo));
+ratingIsTwo.addEventListener('click', () => buttonSelected(ratingIsTwo));
 
-ratingIsThree.addEventListener('click', () => buttonOneSelected(ratingIsThree));
+ratingIsThree.addEventListener('click', () => buttonSelected(ratingIsThree));
 
-ratingIsFour.addEventListener('click', () => buttonOneSelected(ratingIsFour));
+ratingIsFour.addEventListener('click', () => buttonSelected(ratingIsFour));
 
-ratingIsFive.addEventListener('click', () => buttonOneSelected(ratingIsFive));
+ratingIsFive.addEventListener('click', () => buttonSelected(ratingIsFive));
 
 submit.addEventListener('click', submitRating);
 
