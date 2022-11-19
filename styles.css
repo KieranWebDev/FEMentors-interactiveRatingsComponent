@@ -75,11 +75,12 @@ ul {
   justify-content: space-between;
 }
 .rating-container {
-  height: 3.125rem;
-  width: 3.125rem;
-  display: flex;
+  min-height: 50px;
+  min-width: 3.125rem;
+  text-align: center;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   color: #7c8798;
   cursor: pointer;
 }
