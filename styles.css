@@ -19,9 +19,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* position: relative; */
 }
 
-main {
+main,
+.modal {
   max-width: 412px;
   padding: 2rem;
   color: white;
@@ -33,7 +35,14 @@ main {
   border-radius: 30px;
   font-family: 'Overpass', sans-serif;
 }
-.circular-container,
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* .hidden {
+} */
+.modal .circular-container,
 .rating-container {
   background: #262e38;
   border-radius: 50%;
@@ -98,3 +107,5 @@ button:hover {
   background-color: #fc7614;
   color: white;
 }
+
+/* popup */

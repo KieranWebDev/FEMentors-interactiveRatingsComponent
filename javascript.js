@@ -5,6 +5,8 @@ let ratingIsFour = document.querySelector('.four');
 let ratingIsFive = document.querySelector('.five');
 let submit = document.querySelector('#submit-button');
 let ratingMessage = document.querySelector('.rating');
+let mainComponent = document.querySelector('.main');
+let modal = document.querySelector('.modal');
 
 let rating = 0;
 
@@ -25,6 +27,8 @@ function submitRating() {
     alert('you must select a rating before submitting');
   } else {
     ratingMessage.innerText = `You selected ${rating} out of 5`;
+    modal.classList.remove('hidden');
+    mainComponent.classList.add('hidden');
   }
 }
 
